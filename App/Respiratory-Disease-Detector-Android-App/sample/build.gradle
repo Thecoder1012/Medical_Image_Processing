@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion compile_sdk_version
+
+    defaultConfig {
+        applicationId "pl.aprilapps.easyphotopicker.sample"
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+        versionCode version_code
+        versionName version_name
+        defaultConfig {
+            ndk {
+                abiFilters 'armeabi-v7a', 'arm64-v8a'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        mlModelBinding true
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation(project(':library'))
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'org.pytorch:pytorch_android_lite:1.10.0'
+    implementation 'org.pytorch:pytorch_android_torchvision_lite:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+}
