@@ -1,0 +1,16 @@
+<manifest package="pl.aprilapps.easyphotopicker"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <provider
+            android:name=".RespiratoryDiseaseFileProvider"
+            android:authorities="${applicationId}.easyphotopicker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/respiratorydisease_filepaths" />
+        </provider>
+    </application>
+
+</manifest>
