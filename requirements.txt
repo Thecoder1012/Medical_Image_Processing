@@ -1,7 +1,0 @@
-FastAi = 1.0.61
-Matplotlib = 3.2.2
-Numpy = 1.21.6
-Cv2 = 4.1.2
-PIL = 7.1.2
-Scipy = 1.4.1
-Pytorch = 1.11.0+cu113
